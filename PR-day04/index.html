@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: inline-block;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="./latihan04.js" defer></script>
+</head>
+
+<body>
+    <h1 class="title has-text-centered">Badan Pusat Statistik G2 Academy </h1>
+
+    <form name="form1" id="form1">
+        <table class="table" name="tableform">
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td><input type="text" name="nama" id="nama" class="input"></td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td>:</td>
+                <td><input type="text" name="username" id="username" class="input"></td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>:</td>
+                <td><input type="text" name="alamat" id="alamat" class="input"></td>
+            </tr>
+            <tr>
+                <td>Pekerjaan</td>
+                <td>:</td>
+                <td><input type="text" name="pekerjaan" id="pekerjaan" class="input"></td>
+            </tr>
+            <tr>
+                <td>Hobi</td>
+                <td>:</td>
+                <td>
+                    <label class="checkbox">
+                        <input type="checkbox" name="hobies" value="masak"> Masak
+                        <input type="checkbox" name="hobies" value="olahraga"> Olahraga
+                        <input type="checkbox" name="hobies" value="ghibah"> Ghibah
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: right">
+                    <input type="button" class="button is-primary" value="simpan" onclick="simpanData()">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <hr border="5">
+
+    <table class="table" id="myTable">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>Pekerjaan</th>
+            <th>Hobi</th>
+            <th>Action</th>
+        </tr>
+        <tr></tr>
+    </table>
+
+
+</body>
+
+</html>
