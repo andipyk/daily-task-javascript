@@ -1,3 +1,4 @@
+// when button register for save data to database
 const registerSave = () => {
     const newData = inputCollector("group-register")
     if (isUnique(newData.userId)){
@@ -16,9 +17,3 @@ const authLogin = (userName, userPass) => {
     return dataKaryawan
 }
 
-
-
-
-// const newArry = database.map((employee) => employee.roleId)
-//
-// console.log(newArry)
