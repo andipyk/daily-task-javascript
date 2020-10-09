@@ -24,3 +24,6 @@ let database = [
         "password": "4321"
     }
 ]
+
+let loginPage = document.getElementById("loginPage");
+let hrdPage = document.getElementById("hrdPage");

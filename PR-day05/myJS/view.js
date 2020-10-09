@@ -23,24 +23,31 @@ const loginBtn = () => {
 }
 
 // temporary create table here
-createTable('myTable')
+// createTable('myTable')
 
 // save by form edit
 const saveUpdateBtn = () => {
     const updateData = inputCollector("group-edit")
-    updateData(updateData.username, updateData.address)
+    updateData(updateData.userId, updateData.address)
     createTable('myTable')
 }
 
 
-const editEmployeeBtn = () => {
-    // send data to modals/form
+const editEmployeeBtn = (userId, address) => {
+    // send data to modals/form by userId
+
+    const userEditForm = createHtmlInput("text", "group-edit", "userId", userId, true);
+    const addressEditForm = createHtmlInput("text", "group-edit", "address", address, false);
+
+    document.getElementById("editForm").appendChild(userEditForm,addressEditForm)
+
+    // showFormEdit()
 }
 
 
-const deleteEmployeeBtn = () => {
-    // delete it
-    // re-create table
+const deleteEmployeeBtn = (userIdRemove) => {
+    database = database.filter(item => item.userId !== userIdRemove)
+    createTable('myTable')
 }
 
 
