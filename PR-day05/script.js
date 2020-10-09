@@ -20,9 +20,13 @@ const loginBtn = () => {
 
         alert("login gagal !")
     }
-
 }
 
+// temporary create table here
+createTable('myTable')
+const editBtn = () => {
+
+}
 
 
 
