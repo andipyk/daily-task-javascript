@@ -4,6 +4,7 @@ const registerSave = () => {
     if (isUnique(newData.userId)) {
         database.push(newData)
         alert("data succesfully added !")
+        createTable('myTable')
     } else {
         alert("userid sudah digunakan !")
     }
@@ -22,26 +23,7 @@ const loginBtn = () => {
 
 }
 
-// Create table with data
-const createTable = () => {
 
-    const tablearea = document.getElementById('myTable')
-    const table = document.createElement('table');
-
-
-    for (var i = 0; i < database.length; i++) {
-        const tr = document.createElement('tr');
-        const databaseKeys = Object.keys(...database)
-
-        for (let j = 0; j < databaseKeys.length; j++) {
-            tr.appendChild(document.createElement('td'));
-            tr.cells[j].appendChild(document.createTextNode(`${database[i][databaseKeys[j]]}`))
-        }
-        table.appendChild(tr);
-    }
-
-    tablearea.replaceChild(table , tablearea.childNodes[0]);
-}
 
 
 
