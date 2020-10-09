@@ -28,6 +28,13 @@ const authLogin = (userName, userPass) => {
     return dataKaryawan
 }
 
+const updateData = (userName, newAddress) => {
+    const dataKaryawan = database.filter(employee => employee.userId === userName).map(
+        item => item.address = newAddress
+    )
+}
+
+
 
 // Create table with data
 const createTable = ( tableName ) => {

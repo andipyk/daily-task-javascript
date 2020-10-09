@@ -1,5 +1,5 @@
 // when button register for save data to database
-const registerSave = () => {
+const registerBtn = () => {
     const newData = inputCollector("group-register")
     if (isUnique(newData.userId)) {
         database.push(newData)
@@ -24,10 +24,24 @@ const loginBtn = () => {
 
 // temporary create table here
 createTable('myTable')
-const editBtn = () => {
 
+// save by form edit
+const saveUpdateBtn = () => {
+    const updateData = inputCollector("group-edit")
+    updateData(updateData.username, updateData.address)
+    createTable('myTable')
 }
 
+
+const editEmployeeBtn = () => {
+    // send data to modals/form
+}
+
+
+const deleteEmployeeBtn = () => {
+    // delete it
+    // re-create table
+}
 
 
 
